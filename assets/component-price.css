@@ -101,6 +101,7 @@
 }
 
 /* new changes for product info */
+.product__info-wrapper .price .price-item.price-item--sale,
 .product__info-wrapper .price__regular .price-item--regular {
   color: red;
 } 

@@ -190,6 +190,12 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
+              {%- when 'extra-info' -%}
+                {%- if block.settings.extra_info != blank -%}
+                  <div class="product_extra--info rte">
+                    {{ block.settings.extra_info }}
+                  </div>
+                {%- endif -%}
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -940,6 +946,18 @@
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
+    },
+    {
+      "type": "extra-info",
+      "name": "Extra info",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "extra_info",
+          "label": "Product extra info"
+        }
+      ]
     },
     {
       "type": "share",
