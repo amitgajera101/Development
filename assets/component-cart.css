@@ -224,3 +224,10 @@ cart-items {
     gap: 1rem;
   }
 }
+
+/* new css for clear button */
+.clear_cart--block {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}

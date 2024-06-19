@@ -5,6 +5,7 @@
       "blocks": {
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -44,6 +45,12 @@
           "settings": {
           }
         },
+        "extra_info_cbGYt8": {
+          "type": "extra-info",
+          "settings": {
+            "extra_info": "<p><strong>Extra info <\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,<\/p>"
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -59,12 +66,13 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "extra_info_cbGYt8",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",

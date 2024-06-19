@@ -447,9 +447,46 @@
       >
         {{ 'accessibility.loading' | t }}
       </p>
+      
+      <div class="clear_cart--block">
+        <button type="button" class="button clear-cart">
+          Clear
+        </button>
+      </div>
     </form>
   </div>
 </cart-items>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const clearCartButton = document.querySelector('.clear-cart');
+
+    if (clearCartButton) {
+        clearCartButton.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            fetch('/cart/clear.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                location.reload();
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+        });
+    }
+});
+</script>
 
 {% schema %}
 {
