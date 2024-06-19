@@ -593,3 +593,8 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+/* new changes  */
+.card--card {
+  border-color: #000;
+}
